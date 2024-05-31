@@ -2,7 +2,16 @@ package org.demo.summary02_20240531.code;
 
 public class Program {
     public static void main(String[] args) {
-        Calc calc = new Calc();
+        for (int i = 0; i < 5; i++) {
+            run();
+        }
+    }
+
+    public static void run() {
+        ConsoleLogger consoleLogger = new ConsoleLogger();
+        FileLogger fl = new FileLogger();
+
+        Calc calc = new Calc(consoleLogger);
         Div div = new Div();
         Sum sum = new Sum();
         NewSum nSum = new NewSum();
