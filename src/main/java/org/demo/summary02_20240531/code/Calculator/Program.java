@@ -1,4 +1,11 @@
-package org.demo.summary02_20240531.code;
+package org.demo.summary02_20240531.code.Calculator;
+
+import org.demo.summary02_20240531.code.Calculator.core.Calc;
+import org.demo.summary02_20240531.code.Calculator.logger.ConsoleLogger;
+import org.demo.summary02_20240531.code.Calculator.logger.FileLogger;
+import org.demo.summary02_20240531.code.Calculator.operation.Div;
+import org.demo.summary02_20240531.code.Calculator.operation.NewSum;
+import org.demo.summary02_20240531.code.Calculator.operation.Sum;
 
 public class Program {
     public static void main(String[] args) {

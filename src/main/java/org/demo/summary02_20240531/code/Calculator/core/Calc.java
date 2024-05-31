@@ -1,4 +1,7 @@
-package org.demo.summary02_20240531.code;
+package org.demo.summary02_20240531.code.Calculator.core;
+
+import org.demo.summary02_20240531.code.Calculator.logger.Logger;
+import org.demo.summary02_20240531.code.Calculator.operation.Operation;
 
 public class Calc {
     Logger consoleLogger;
