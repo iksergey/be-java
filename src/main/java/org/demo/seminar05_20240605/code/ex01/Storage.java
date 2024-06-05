@@ -5,11 +5,11 @@ public class Storage {
     private int size;
 
     private static class Node {
-        int data;
+        int value;
         Node next;
 
         Node(int data) {
-            this.data = data;
+            this.value = data;
             this.next = null;
         }
     }
@@ -19,22 +19,22 @@ public class Storage {
         size = 0;
     }
 
-    public void append(int data) {
-        Node newNode = new Node(data);
+    public void append(int item) {
+        Node node = new Node(item);
         if (head == null) {
-            head = newNode;
+            head = node;
         } else {
             Node current = head;
             while (current.next != null) {
                 current = current.next;
             }
-            current.next = newNode;
+            current.next = node;
         }
         size++;
     }
 
-    public void appendRange(int[] data) {
-        for (int value : data) {
+    public void appendRange(int... items) {
+        for (int value : items) {
             append(value);
         }
     }
@@ -43,14 +43,14 @@ public class Storage {
         if (head == null)
             return;
 
-        if (head.data == data) {
+        if (head.value == data) {
             head = head.next;
             size--;
             return;
         }
 
         Node current = head;
-        while (current.next != null && current.next.data != data) {
+        while (current.next != null && current.next.value != data) {
             current = current.next;
         }
 
@@ -84,7 +84,7 @@ public class Storage {
         for (int i = 0; i < index; i++) {
             current = current.next;
         }
-        return current.data;
+        return current.value;
     }
 
     public int size() {
@@ -94,7 +94,7 @@ public class Storage {
     public boolean contains(int data) {
         Node current = head;
         while (current != null) {
-            if (current.data == data) {
+            if (current.value == data) {
                 return true;
             }
             current = current.next;
@@ -107,7 +107,7 @@ public class Storage {
         Node current = head;
         StringBuilder out = new StringBuilder();
         while (current != null) {
-            out.append(current.data + " ");
+            out.append(current.value + " ");
             current = current.next;
         }
         return "[" + out.toString().trim() + "]";
