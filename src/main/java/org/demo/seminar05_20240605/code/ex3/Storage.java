@@ -19,7 +19,7 @@ public class Storage implements CustomList {
         size = 0;
     }
 
-    public void append(int item) {
+    public void append(Integer item) {
         Node node = new Node(item);
         if (head == null) {
             head = node;
@@ -33,13 +33,13 @@ public class Storage implements CustomList {
         size++;
     }
 
-    public void appendRange(int... items) {
+    public void appendRange(Integer... items) {
         for (int value : items) {
             append(value);
         }
     }
 
-    public void remove(int data) {
+    public void remove(Integer data) {
         if (head == null)
             return;
 
@@ -76,7 +76,7 @@ public class Storage implements CustomList {
         size--;
     }
 
-    public int get(int index) {
+    public Integer get(int index) {
         if (index < 0 || index >= size)
             throw new IndexOutOfBoundsException();
 
@@ -91,7 +91,7 @@ public class Storage implements CustomList {
         return size;
     }
 
-    public boolean contains(int data) {
+    public boolean contains(Integer data) {
         Node current = head;
         while (current != null) {
             if (current.value == data) {
@@ -112,4 +112,5 @@ public class Storage implements CustomList {
         }
         return "[" + out.toString().trim() + "]";
     }
+
 }

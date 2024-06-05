@@ -2,29 +2,7 @@ package org.demo.seminar05_20240605.code.ex3;
 
 import java.util.Iterator;
 
-public class RubberArray implements CustomList, Iterable<Integer>, Iterator<Integer> {
-
-    int current;
-
-    public void reset() {
-        current = 0;
-    }
-
-    @Override
-    public Iterator<Integer> iterator() {
-        return this;
-    }
-
-    @Override
-    public boolean hasNext() {
-        return current < size;
-    }
-
-    @Override
-    public Integer next() {
-        return array[current++];
-    }
-
+public class RubberArray implements CustomList {
     private int[] array;
     private int size;
     private static final int DEFAULT_CAPACITY = 2;
@@ -34,18 +12,19 @@ public class RubberArray implements CustomList, Iterable<Integer>, Iterator<Inte
         this.size = 0;
     }
 
-    public void append(int element) {
+    public void append(Integer element) {
         ensureCapacity();
         array[size++] = element;
     }
 
-    public void appendRange(int... elements) {
+    public void appendRange(Integer... elements) {
         ensureCapacity(size + elements.length);
         System.arraycopy(elements, 0, array, size, elements.length);
         size += elements.length;
     }
 
-    public void remove(int element) {
+    @Override
+    public void remove(Integer element) {
         for (int i = 0; i < size; i++) {
             if (array[i] == element) {
                 removeAt(i);
@@ -62,7 +41,7 @@ public class RubberArray implements CustomList, Iterable<Integer>, Iterator<Inte
         size--;
     }
 
-    public int get(int index) {
+    public Integer get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Invalid index");
         }
@@ -73,7 +52,7 @@ public class RubberArray implements CustomList, Iterable<Integer>, Iterator<Inte
         return size;
     }
 
-    public boolean contains(int element) {
+    public boolean contains(Integer element) {
         for (int i = 0; i < size; i++) {
             if (array[i] == element) {
                 return true;

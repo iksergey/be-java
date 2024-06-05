@@ -1,17 +1,17 @@
 package org.demo.seminar05_20240605.code.ex3;
 
-public interface CustomList {
-    void append(int element);
+public interface CustomList extends GenericList<Integer> {
+    void append(Integer element);
 
-    void appendRange(int... elements);
+    void appendRange(Integer... elements);
 
-    void remove(int element);
+    void remove(Integer element);
 
     void removeAt(int position);
 
-    int get(int index);
+    Integer get(int index);
 
     int size();
 
-    boolean contains(int element);
+    boolean contains(Integer element);
 }
