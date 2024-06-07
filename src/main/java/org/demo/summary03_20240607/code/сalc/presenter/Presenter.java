@@ -7,9 +7,9 @@ public class Presenter {
     View view;
     Model model;
 
-    public Presenter(Model m, ConsoleView consoleView) {
+    public Presenter(Model m, View view) {
         model = m;
-        view = consoleView;
+        this.view = view;
     }
 
     public void buttonClick() {
