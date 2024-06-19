@@ -31,13 +31,13 @@ try {
 
 3. **Создание пользовательских исключений**: Вы можете создавать свои собственные исключения, наследуя от класса `Exception` или `RuntimeException`.
 
-   ```java
-   public class MyException extends Exception {
-       public MyException(String message) {
-           super(message);
-       }
-   }
-   ```
+```java
+public class MyException extends Exception {
+    public MyException(String message) {
+        super(message);
+    }
+}
+```
 
 4. **Propagating exceptions**: Исключения могут быть переданы на более высокий уровень с помощью ключевого слова `throws` в сигнатуре метода.
 
@@ -101,4 +101,41 @@ try {
 
 ### Иерархия ошибок (Error)
 
-Ошибки наследуются от класса `Error`, который, в свою очередь, является подклассом класса `Throwable`. Ниже приведены некоторые из распространенных ошибок и их иерархия:
+Ошибки наследуются от класса `Error`, который, в свою очередь, является подклассом класса `Throwable`. Ниже приведены некоторые из распространенных ошибок и их иерархия.
+
+1. **VirtualMachineError**
+   - InternalError
+   - OutOfMemoryError – возникает, когда JVM не может выделить больше памяти для работы приложения.
+   - StackOverflowError – возникает при переполнении стека вызовов, например, из-за бесконечной рекурсии.
+   - UnknownError
+
+2. **LinkageError**: Возникает, когда ошибка происходит в процессе связывания класса.
+   - ClassCircularityError
+   - ClassFormatError
+   - ExceptionInInitializerError
+   - IncompatibleClassChangeError
+   - NoClassDefFoundError
+   - UnsatisfiedLinkError
+   - VerifyError
+ 
+ 
+Пример иерархии ошибок:
+
+- Error
+  - AssertionError
+  - LinkageError
+    - ClassCircularityError
+    - ClassFormatError
+    - ExceptionInInitializerError
+    - IncompatibleClassChangeError
+    - NoClassDefFoundError
+    - UnsatisfiedLinkError
+    - VerifyError
+  - VirtualMachineError
+    - InternalError
+    - OutOfMemoryError
+    - StackOverflowError
+    - UnknownError
+  - ThreadDeath
+и т. д.
+
