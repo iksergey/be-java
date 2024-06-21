@@ -48,4 +48,13 @@ public class ContactBook {
         return contacts.size();
     }
 
+    private boolean contains(int index) {
+        return contacts != null
+                && contacts.size() > index;
+    }
+
+    public Contact getContact(int index) {
+        return contains(index) ? contacts.get(index) : null;
+    }
+
 }

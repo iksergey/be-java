@@ -1,8 +1,25 @@
 package org.demo.summary05_20240621.code.core.models;
 
 public class Contact {
-    public String firstName;
+    private String firstName;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     private String lastName;
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
     public Contact(String firstName, String lastName) {
         this.firstName = firstName;
