@@ -53,3 +53,88 @@
 
 6. **Внедрение зависимостей (Dependency Injection)**
    - Использование внедрения зависимостей для взаимодействия между компонентами.
+
+
+#### Структура проекта
+1. **Model**
+   - `Contact.java`
+
+2. **View**
+   - `ConsoleView.java`
+
+3. **Repository**
+   - `FileRepository.java`
+   - `IRepository.java`
+
+4. **Service**
+   - `ContactService.java`
+
+5. **Main**
+   - `Main.java`
+
+#### Примерные сигнатуры классов и методов
+
+1. **Contact.java**
+   ```java
+   public class Contact {
+       private String firstName;
+       private String lastName;
+       private String phone;
+       private String email;
+       
+       // Конструкторы, геттеры и сеттеры
+   }
+   ```
+
+2. **IRepository.java**
+   ```java
+   public interface IRepository {
+       void addContact(Contact contact);
+       List<Contact> getAllContacts();
+       void updateContact(Contact contact);
+       void deleteContact(String email);
+   }
+   ```
+
+3. **FileRepository.java**
+   ```java
+   public class FileRepository implements IRepository {
+       private String filePath;
+       
+       // Реализация методов интерфейса IRepository
+   }
+   ```
+
+4. **IView.java**
+   ```java
+   public interface IView {
+       void displayContacts(List<Contact> contacts);
+       Contact getContactDetails();
+       String getContactEmail();
+   }
+   ```
+
+5. **ConsoleView.java**
+   ```java
+   public class ConsoleView implements IView {
+       // Реализация методов интерфейса IView
+   }
+   ```
+
+6. **ContactService.java**
+   ```java
+   public class ContactService {
+       private IRepository repository;
+       
+       // Конструктор и методы для обработки логики контактов
+   }
+   ```
+
+7. **Main.java**
+   ```java
+   public class Main {
+       public static void main(String[] args) {
+           // Инициализация и запуск приложения
+       }
+   }
+   ```
