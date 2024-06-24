@@ -8,6 +8,7 @@ import org.demo.summary05_20240621.code.Environment;
 import org.demo.summary05_20240621.code.core.mvp.Presenter;
 import org.demo.summary05_20240621.code.ui.ConsoleView;
 
+// Класс app
 public class App {
     public static void ButtonClick() {
         Data.seed(Environment.path);
