@@ -18,7 +18,6 @@ public class UncheckedExceptions {
         strNull();
         // String str = null;
         System.out.println(str.length()); // NullPointerException
-        NullPointerException
         System.out.println("end");
     }
 }
