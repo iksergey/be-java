@@ -1,6 +1,7 @@
 package org.demo.seminar10_20240626.code.ex00;
 
 public class Main {
+    // https://en.wikipedia.org/wiki/Tree_traversal
     public static void main(String[] args) {
         Tree root = new Tree(7);
         root.left = new Tree(2);
