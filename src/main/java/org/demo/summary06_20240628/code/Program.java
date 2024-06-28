@@ -1,4 +1,4 @@
-package org.demo.summary06_2024068.code;
+package org.demo.summary06_20240628.code;
 
 public class Program {
     public static void main(String[] args) {
