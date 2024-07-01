@@ -252,7 +252,6 @@ public class ReduceExample {
     }
 }
 ```
-
 ## Функциональные интерфейсы Java
 
 1. **Supplier<T>** - поставщик (supplier) значения типа T без входных параметров:
@@ -297,6 +296,8 @@ public class ReduceExample {
    BinaryOperator<Integer> sum = (a, b) -> a + b;
    System.out.println(sum.apply(3, 4)); // Выведет: 7
    ```
+
+7. [Package java.util.function](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
 
 ## Задачи для разгона
 
