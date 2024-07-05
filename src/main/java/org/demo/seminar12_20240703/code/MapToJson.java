@@ -1,4 +1,4 @@
-package org.demo.seminar11_20240703.code;
+package org.demo.seminar12_20240703.code;
 
 import java.util.HashMap;
 import java.util.List;
