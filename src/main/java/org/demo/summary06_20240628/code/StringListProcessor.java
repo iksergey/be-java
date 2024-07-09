@@ -10,8 +10,8 @@ public class StringListProcessor {
         List<String> namesList = List.of("Анна", "Иван", "Екатерина", "Александр", "Ольга", "Алексей");
         String[] namesArray = namesList.toArray(new String[namesList.size()]);
 
-        List<Integer> nameLengths = processStrings(namesList, str -> str.length());
-        System.out.println("Длины имен (список): " + nameLengths);
+//        List<Integer> nameLengths = processStrings(namesList, str -> str.length());
+//        System.out.println("Длины имен (список): " + nameLengths);
 
         List<String> namesStartingWithA = filterStrings(namesList, str -> str.startsWith("А"));
         System.out.println("Имена, начинающиеся на 'А': " + namesStartingWithA);
@@ -39,7 +39,7 @@ public class StringListProcessor {
     public static List<Integer> processStrings(List<String> strings, StringProcessor processor) {
         List<Integer> results = new ArrayList<>();
         for (String str : strings) {
-            results.add(processor.process(str));
+//            results.add(processor.process(str));
         }
         return results;
     }
@@ -58,11 +58,6 @@ public class StringListProcessor {
         return processor.processArray(strings);
     }
 
-}
-
-@FunctionalInterface
-interface StringProcessor {
-    int process(String input);
 }
 
 @FunctionalInterface
