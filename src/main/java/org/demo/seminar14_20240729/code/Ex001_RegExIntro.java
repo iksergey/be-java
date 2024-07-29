@@ -27,7 +27,7 @@ public class Ex001_RegExIntro {
             for (int j = 0; j < phones.length; j++) {
                 String phone = phones[j];
                 Matcher matcher = pattern.matcher(phone);
-                boolean matchesResult = matcher.matches();
+                boolean matcherResult = matcher.matches();
                 // matcher.reset();
                 matcher = pattern.matcher(phone);
                 boolean findResult = matcher.find();
@@ -35,7 +35,7 @@ public class Ex001_RegExIntro {
                 System.out.printf("Соответствие [%s] на [%s]: %s | %s >> \n",
                         phone,
                         patternStr,
-                        matchesResult,
+                        matcherResult,
                         findResult);
 
             }
