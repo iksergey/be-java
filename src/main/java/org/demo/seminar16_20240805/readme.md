@@ -193,11 +193,11 @@
 
 В Java для работы с временными зонами используется класс `ZoneId`. Пример использования:
 
-[1] https://en.wikipedia.org/wiki/Time_zone
-[2] https://www.ryanthomson.net/articles/practical-guide-timezones/
-[3] https://simple.wikipedia.org/wiki/Time_zone
-[4] https://www.bbc.co.uk/bitesize/articles/zjk46v4
-[5] https://www.timeanddate.com/time/current-number-time-zones.html
+- https://en.wikipedia.org/wiki/Time_zone
+- https://www.ryanthomson.net/articles/practical-guide-timezones/
+- https://simple.wikipedia.org/wiki/Time_zone
+- https://www.bbc.co.uk/bitesize/articles/zjk46v4
+- https://www.timeanddate.com/time/current-number-time-zones.html
 
 
 ## Тренировка
